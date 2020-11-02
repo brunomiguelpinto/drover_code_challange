@@ -1,24 +1,35 @@
-# README
+# Drover Code Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my solution to drover code challange
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
 
-* System dependencies
+Install docker 
 
-* Configuration
+then run 
 
-* Database creation
+    $ docker-compose up
 
-* Database initialization
+And then execute:
 
-* How to run the test suite
+    $ docker-compose run web bin/setup
+this will create the database and load the seed file
 
-* Services (job queues, cache servers, search engines, etc.)
+## Api docs
 
-* Deployment instructions
+to see the documentation of the endpoints go to
 
-* ...
+    $ /api-docs/index.html
+
+## Tests
+
+to run the tests use rspec
+
+    $ rspec
+
+## Things to improve
+
+- Some data can be cached it will not change frequently
+- Add something to handle the exceptions in a central way
+- Add more tests
