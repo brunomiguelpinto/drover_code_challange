@@ -43,6 +43,8 @@ module Api
       # Use callbacks to share common setup or constraints between actions.
       def set_car
         @car = Car.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+        render nothing: true, status: :not_found
       end
 
       # Only allow a trusted parameter "white list" through.

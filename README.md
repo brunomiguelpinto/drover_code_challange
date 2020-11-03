@@ -33,3 +33,4 @@ to run the tests use rspec
 - Some data can be cached it will not change frequently
 - Add something to handle the exceptions in a central way
 - Add more tests
+- Add more data to swagger

@@ -5,24 +5,26 @@ describe 'Cars API' do
   path '/api/v1/cars' do
     post 'Creates a car' do
       tags 'Cars'
-      consumes 'application/json', 'application/xml'
-      parameter name: :pet, in: :body, schema: {
+      consumes 'application/json'
+      parameter name: :car, in: :body, schema: {
         type: :object,
         properties: {
-          name: { type: :string },
-          photo_url: { type: :string },
-          status: { type: :string }
-        },
-        required: %w[name status]
+          model_id: { type: :integer },
+          maker_id: { type: :integer },
+          subscription: { type: :integer },
+          color: { type: :string },
+          availability_date: { type: :string },
+          year: { type: :integer }
+        }
       }
 
       response '201', 'car created' do
-        let(:pet) { { name: 'Dodo', status: 'available' } }
+        let(:car) { { model_id: 'Dodo', maker_id: 'available' } }
         run_test!
       end
 
       response '422', 'invalid request' do
-        let(:pet) { { name: 'foo' } }
+        let(:car) { { name: 'foo' } }
         run_test!
       end
     end
