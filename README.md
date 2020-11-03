@@ -34,3 +34,4 @@ to run the tests use rspec
 - Add something to handle the exceptions in a central way
 - Add more tests
 - Add more data to swagger
+- Use fakker to create seed data 
