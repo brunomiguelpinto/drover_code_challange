@@ -21,6 +21,10 @@ this will create the database and load the seed file
 to see the documentation of the endpoints go to
 
     $ /api-docs/index.html
+    
+example with filters and order
+    
+    $ http://localhost:3000/api/v1/cars/?page=1&maker=toyota&color=red&model=yaris&sort_by=price&sort_order=asc
 
 ## Tests
 
